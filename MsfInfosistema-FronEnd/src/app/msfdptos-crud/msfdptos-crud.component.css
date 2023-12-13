@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('/MsfInfosistema-FronEnd/src/assets/Fondo/fondo.jpg');
+}
+
+.form-register {
+  width: 100%;
+  max-width: 2500px; 
+  background: #24303c;
+  padding: 55px;
+  margin: auto;
+  margin-top: 200px;
+  margin-bottom: 300px;
+  border-radius: 8px;
+  font-family: 'calibri';
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+  display: flex;
+  flex-direction: column; 
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.controls {
+  flex: 1; 
+  background: #24303c;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #1f53c5;
+  font-family: 'calibri';
+  font-size: 18px;
+  color: white;
+  margin-right: 10px; 
+}
+
+.form-register h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.form-register p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.form-register a {
+  color: white;
+  text-decoration: none;
+}
+
+.form-register a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.form-register .botons {
+  width: 100%;
+  background: #1f53c5;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+/* Data */
+.data-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.data-item {
+  border: 1px solid #1f53c5;
+  background-color:#24303c;
+  margin-bottom: 15px;
+  padding: 15px;
+  position: relative;
+}
+
+.data-field {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.data-actions {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+
+.data-actions button {
+  margin-right: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px; /* Ajusta el tamaño del texto de los botones */
+  padding: 10px 15px; /* Ajusta el padding de los botones para hacerlos más grandes */
+}
+
+.edit-button {
+  background-color: #4CAF50;
+}
+
+.delete-button {
+  background-color: #f44336;
+}

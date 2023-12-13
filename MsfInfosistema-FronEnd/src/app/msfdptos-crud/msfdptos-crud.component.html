@@ -1,0 +1,123 @@
+  <!-- src/app/msfdptos-crud/msfdptos-crud.component.html -->
+<div class="msfdptos-crud">
+    <h2>msfdptos CRUD</h2>
+  
+    <button (click)="toggleView()">
+      {{ showDataOnly ? 'Mostrar Formularios' : 'Mostrar Solo Datos' }}
+    </button>
+  
+    <div *ngIf="!showDataOnly; else dataView">
+        <section class="form-register">
+            <h4>MSF DPTOS CRUD</h4>
+      <form>
+        
+
+        <div class="form-row">
+        <input class="controls" type="text" id="Dptoid" placeholder="Ingrese Dptoid" name="Dptoid" [(ngModel)]="newItem.Dptoid" />
+  
+        <input class="controls" type="text" id="Descripcion" placeholder="Ingrese Descripcion" name="Descripcion" [(ngModel)]="newItem.Descripcion" />
+  
+        <input class="controls" type="text" id="Idcia" placeholder="Ingrese Idcia" name="Idcia" [(ngModel)]="newItem.Idcia" />
+  
+        <input class="controls" type="text" id="ctamayor_inventario" placeholder="Ingrese Cuenta Mayor Inventario" name="ctamayor_inventario" [(ngModel)]="newItem.ctamayor_inventario" />
+        </div>
+
+        <div class="form-row">
+        <input class="controls" type="text" id="ctamayor_venta" placeholder="Ingrese Cuenta Mayor Venta" name="ctamayor_venta" [(ngModel)]="newItem.ctamayor_venta" />
+  
+        <input class="controls" type="text" id="ctamayor_costo" placeholder="Ingrese Cuenta Mayor Costo" name="ctamayor_costo" [(ngModel)]="newItem.ctamayor_costo" />
+
+        <input class="controls" type="text" id="ctamayor_dev_costo" placeholder="Ingrese Cuenta Mayor Dev Costo" name="ctamayor_dev_costo" [(ngModel)]="newItem.ctamayor_dev_costo" />
+  
+        <input class="controls" type="text" id="ctamayor_dev_venta" placeholder="Ingrese Cuenta Mayor Dev Venta" name="ctamayor_dev_venta" [(ngModel)]="newItem.ctamayor_dev_venta" />
+        </div>
+
+        <div class="form-row">
+        <input class="controls" type="text" id="ctamayor_comision" placeholder="Ingrese Cuenta Mayor Comision" name="ctamayor_comision" [(ngModel)]="newItem.ctamayor_comision" />
+  
+        <input class="controls" type="number" id="porcprc0" placeholder="Ingrese Porcprc0" name="porcprc0" [(ngModel)]="newItem.porcprc0" />
+  
+        <input class="controls" type="number" id="porcprc1" placeholder="Ingrese Porcprc1" name="porcprc1" [(ngModel)]="newItem.porcprc1" />
+  
+        <input class="controls" type="number" id="porcprc2" placeholder="Ingrese Porcprc2" name="porcprc2" [(ngModel)]="newItem.porcprc2" />
+        </div>
+
+        <div class="form-row">
+        <input class="controls"type="number" id="porcprc3" placeholder="Ingrese Porcprc3" name="porcprc3" [(ngModel)]="newItem.porcprc3" />
+  
+        <input  class="controls" type="number" id="porcprc4" placeholder="Ingrese Porcprc4" name="porcprc4" [(ngModel)]="newItem.porcprc4" />
+  
+        <input class="controls" type="number" id="porcprc5" placeholder="Ingrese Porcprc5" placeholder="Ingrese Descripcion" name="porcprc5" [(ngModel)]="newItem.porcprc5" />
+  
+        <input class="controls" type="number" id="secuencia" placeholder="Ingrese Secuencia" name="secuencia" [(ngModel)]="newItem.secuencia" />
+        </div>
+        
+        <button class="botons" type="button" *ngIf="!isEditing" (click)="addItem()">Agregar</button>
+        <button class="botons" type="button" *ngIf="isEditing" (click)="updateItem()">Actualizar</button>
+      </form>
+    </section>
+    </div>
+  
+<!-- src/app/msfdptos-crud/msfdptos-crud.component.html -->
+<ng-template #dataView>
+    <ul class="data-list">
+      <li *ngFor="let item of data; let i = index" class="data-item">
+        <div class="data-field">
+          <strong>Dptoid:</strong> {{ item.Dptoid }}
+        </div>
+        <div class="data-field">
+          <strong>Descripción:</strong> {{ item.Descripcion }}
+        </div>
+        <div class="data-field">
+          <strong>Idcia:</strong> {{ item.Idcia }}
+        </div>
+        <div class="data-field">
+          <strong>Cuenta Mayor Inventario:</strong> {{ item.ctamayor_inventario }}
+        </div>
+        <div class="data-field">
+          <strong>Cuenta Mayor Venta:</strong> {{ item.ctamayor_venta }}
+        </div>
+        <div class="data-field">
+          <strong>Cuenta Mayor Costo:</strong> {{ item.ctamayor_costo }}
+        </div>
+        <div class="data-field">
+          <strong>Cuenta Mayor Dev Costo:</strong> {{ item.ctamayor_dev_costo }}
+        </div>
+        <div class="data-field">
+          <strong>Cuenta Mayor Dev Venta:</strong> {{ item.ctamayor_dev_venta }}
+        </div>
+        <div class="data-field">
+          <strong>Cuenta Mayor Comision:</strong> {{ item.ctamayor_comision }}
+        </div>
+        <div class="data-field">
+          <strong>Porcprc0:</strong> {{ item.porcprc0 }}
+        </div>
+        <div class="data-field">
+          <strong>Porcprc1:</strong> {{ item.porcprc1 }}
+        </div>
+        <div class="data-field">
+          <strong>Porcprc2:</strong> {{ item.porcprc2 }}
+        </div>
+        <div class="data-field">
+          <strong>Porcprc3:</strong> {{ item.porcprc3 }}
+        </div>
+        <div class="data-field">
+          <strong>Porcprc4:</strong> {{ item.porcprc4 }}
+        </div>
+        <div class="data-field">
+          <strong>Porcprc5:</strong> {{ item.porcprc5 }}
+        </div>
+        <div class="data-field">
+          <strong>Secuencia:</strong> {{ item.secuencia }}
+        </div>
+  
+        <div class="data-actions">
+          <button (click)="editItem(i)" class="edit-button">Editar</button>
+          <button (click)="deleteItem(i)" class="delete-button">Eliminar</button>
+        </div>
+      </li>
+    </ul>
+  </ng-template>
+  
+  </div>
+  
